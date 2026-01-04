@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Components ---------- */
+@layer components {
+  .container { @apply max-w-6xl md:max-w-7xl mx-auto px-4; }
+  .section { @apply py-14 md:py-24; }
+
+  .h1 { @apply text-[clamp(2rem,5vw,3.5rem)] leading-tight font-extrabold tracking-tight text-brand-700; }
+  .h2 { @apply text-[clamp(1.5rem,3.2vw,2.25rem)] leading-tight font-bold tracking-tight text-brand-700; }
+  .lead { @apply text-[1.05rem] md:text-lg text-slate-600; max-width:65ch; }
+  .prose { max-width:65ch; }
+
+  .btn-primary { @apply inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-semibold bg-brand-700 text-white hover:bg-brand-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition; }
+  .btn-secondary { @apply inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-semibold border border-slate-300 text-slate-800 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition; }
+
+  .card { @apply rounded-2xl shadow-sm ring-1 ring-slate-200 p-6 bg-white transition; }
+  .card-raise { @apply hover:-translate-y-1 hover:shadow-lg; transition: transform .25s, box-shadow .25s; }
+
+  .anchor-offset { scroll-margin-top: 84px; }
+
+  /* reveal animation helper */
+  .reveal { animation: fadeUp .7s ease-out both; }
+}
+
+/* ---------- Base ---------- */
+@layer base {
+  html { font-family: "Poppins", system-ui, sans-serif; }
+  body { color: #0f172a; }
+  :focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible { @apply ring-2 ring-brand-500 rounded-lg; }
+}
+
+/* ---------- Utilities & animations ---------- */
+@layer utilities {
+  .animate-slow-spin { animation: slowspin 22s linear infinite; }
+  .animate-float { animation: float 8s ease-in-out infinite; }
+  .marquee { animation: marquee 22s linear infinite; }
+  .marquee-fast { animation: marquee 14s linear infinite; }
+  .sway-x { animation: swayx 3.5s ease-in-out infinite; }
+}
+
+@keyframes slowspin { from { transform: rotate(0deg) } to { transform: rotate(360deg) } }
+@keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+@keyframes marquee { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
+@keyframes swayx { 0% { transform: translateX(-6px) } 50% { transform: translateX(6px) } 100% { transform: translateX(-6px) } }
+@keyframes fadeUp { 0% { opacity: 0; transform: translateY(16px) } 100% { opacity: 1; transform: translateY(0) } }

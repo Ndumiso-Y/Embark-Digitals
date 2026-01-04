@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Title & description -->
+<title>Embark Digitals — Websites, Social & Promo Designs</title>
+<meta name="description" content="Beautiful, fast websites and promotional designs that help you win business." />
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+
+<!-- Favicon & theme color -->
+<link rel="icon" href="/favicon.png" />
+<meta name="theme-color" content="#28697a" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="Embark Digitals" />
+<meta property="og:description" content="Beautiful, fast websites and promotional designs that help you win business." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/og.jpg" />
+<meta property="og:url" content="https://www.embarkdigitals.com/" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Embark Digitals",
+  "url": "https://www.embarkdigitals.com/",
+  "logo": "/logo.png",
+  "sameAs": [
+    "https://www.facebook.com/EmbarkDigitals",
+    "https://www.linkedin.com/company/embark-digitals"
+  ],
+  "email": "contact@embarkdigitals.com",
+  "telephone": "+27 60 714 79390"
+}
+</script>
+
+
+    <!-- GitHub Pages SPA redirect script -->
+    <script>
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+  </head>
+  <body class="bg-white text-gray-800">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

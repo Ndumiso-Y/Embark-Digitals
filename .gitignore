@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Development tools
+.eslintcache
+
+# Image optimization script (not needed in production)
+optimize-images.js
+
+# Original unoptimized images (keeping optimized versions only)
+public/ecardimage.png
+public/screenshotdoc.png
+
+# Archives and temporary files
+*.zip
+nul
