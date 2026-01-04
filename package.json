@@ -9,7 +9,7 @@
     "build:github": "vite build --mode github-pages",
     "build:cpanel": "vite build",
     "preview": "vite preview",
-    "deploy:github": "npm run build:github && gh-pages -d dist"
+    "deploy:github": "npm run build:github && npx gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "react": "^18.3.1",
